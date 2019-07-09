@@ -2,6 +2,7 @@
   "name": "react-ssr-boilerplate",
   "version": "5.0.0",
   "private": true,
+  "homepage":"https://dvyogesh.github.io/currency-exchange",
   "engines": {
     "node": ">=10.15"
   },
