@@ -18,7 +18,7 @@ class CurrencyExchange extends React.Component {
     this.state = {
       currencyList:cloneDeep(Constants.currencyList),
       //USDValues: props.USDValues, //cloneDeep(Constants[props.selectedTech]),
-      dropDownValue: '',
+      dropDownValue: 'INR',
       USDValue: 1.0,
       currencyPrices:{}
     }
@@ -32,6 +32,7 @@ class CurrencyExchange extends React.Component {
     api.featchCurrencyData.currencyApi()
     .then(res => {
       this.setState({currencyPrices: res.rates})
+      this.pushOneCuuency()
     })
     .catch((error) => {
       this.setState({loading: false})
@@ -39,7 +40,7 @@ class CurrencyExchange extends React.Component {
     });
     //
     // *******  Axios Example ********
-    
+
     // use import axios from 'axios'
     //axios.get(`https://api.exchangeratesapi.io/latest?base=USD`)
     //   .then((response) => {
@@ -56,6 +57,17 @@ class CurrencyExchange extends React.Component {
     //     this.setState({loading: false})
     //     toast.error(`${error}`)
     //   });
+  }
+
+  pushOneCuuency = () => {
+      console.log('cool');
+      const {currencyList, currencyPrices, dropDownValue}=this.state
+      currencyList.push({
+        fullName: dropDownValue,
+        shortName: dropDownValue,
+        oneUnitInUSD: currencyPrices[dropDownValue]
+      })
+      this.setState({currencyList})
   }
 
   handleChange = (type)=>(event) =>{

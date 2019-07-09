@@ -2,24 +2,24 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Loadable from 'react-loadable';
 import 'react-toastify/dist/ReactToastify.css';
-import Style from './AppStyle'
+import Style from './components/AppStyle'
 import withStyles from '@material-ui/core/styles/withStyles'
 const LoadableHome = Loadable({
-  loader: () => import(/* webpackChunkName: 'home' */ './Home'),
+  loader: () => import(/* webpackChunkName: 'home' */ './components/Home'),
   loading() {
     return <div>Loading...</div>;
   }
 });
 
 const LoadableAbout = Loadable({
-  loader: () => import(/* webpackChunkName: 'about' */ './about/About'),
+  loader: () => import(/* webpackChunkName: 'about' */ './components/about/About'),
   loading() {
     return <div>Loading...</div>;
   }
 });
 
 const CurrencyExchange = Loadable({
-  loader: () => import(/* webpackChunkName: 'about' */ '../containers/CurrencyExchange/CurrencyExchange'),
+  loader: () => import(/* webpackChunkName: 'CurrencyExchange' */ './containers/CurrencyExchange/CurrencyExchange'),
   loading() {
     return <div>Loading...</div>;
   }
