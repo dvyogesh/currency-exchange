@@ -7,7 +7,9 @@
 ## Development
 
 - `npm start`
-  - Start the dev server at [http://localhost:3000](http://localhost:3000)
+  - Start the dev server at
+  - http://localhost:3000/CurrencyExchange
+  - [http://localhost:3000](http://localhost:3000)
 - `npm test`
   - Start `jest` in watch mode
 

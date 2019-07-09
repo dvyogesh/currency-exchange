@@ -60,7 +60,6 @@ class CurrencyExchange extends React.Component {
   }
 
   pushOneCuuency = () => {
-      console.log('cool');
       const {currencyList, currencyPrices, dropDownValue}=this.state
       currencyList.push({
         fullName: dropDownValue,
@@ -91,7 +90,6 @@ class CurrencyExchange extends React.Component {
     } else {
         toast.error('select proper Cuurency')
     }
-    console.log('addmore');
   }
 
   removeCurrencyList = (index) => {
