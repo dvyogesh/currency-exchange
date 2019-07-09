@@ -49,7 +49,7 @@ const jsScripts = bundles => {
       jsFilePath =>
         `<script type="text/javascript" src="${jsFilePath}" defer></script>`
     )
-    .join('');
+    .join('\n');
 };
 
 export const indexHtml = ({ helmet, serverData, markup, bundles }) => {

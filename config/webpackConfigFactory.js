@@ -24,7 +24,13 @@ const resolvePath = relativePath => path.resolve(__dirname, relativePath);
 module.exports = function(envType) {
   const IS_DEV = envType === 'development';
   const IS_PROD = envType === 'production';
-  const config = {};
+  const config = {
+    // resolve: {
+    //    alias: {
+    //      'react-dom': '@hot-loader/react-dom'
+    //    }
+    //  },
+  };
 
   config.mode = envType;
 
@@ -81,6 +87,11 @@ module.exports = function(envType) {
           compact: IS_PROD
         }
       },
+      {
+       test: /\.(js|jsx)$/,
+       use: 'react-hot-loader/webpack',
+       include: /node_modules/
+     },
 
       // CSS Modules
       {

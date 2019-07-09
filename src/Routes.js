@@ -4,6 +4,7 @@ import Loadable from 'react-loadable';
 import 'react-toastify/dist/ReactToastify.css';
 import Style from './components/AppStyle'
 import withStyles from '@material-ui/core/styles/withStyles'
+//import  CurrencyExchange from './containers/CurrencyExchange/CurrencyExchange'
 const LoadableHome = Loadable({
   loader: () => import(/* webpackChunkName: 'home' */ './components/Home'),
   loading() {
