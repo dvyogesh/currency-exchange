@@ -1,0 +1,15 @@
+@import '../../styles/colors';
+
+.title {
+  color: $blue;
+}
+
+.react-logo {
+  width: 200px;
+}
+.text-center {
+  text-align: center;
+  img{
+    min-width: 500px;
+  }
+}
