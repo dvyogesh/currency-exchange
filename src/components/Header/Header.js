@@ -38,23 +38,16 @@ class Header extends React.Component {
              <Typography variant="display2" className={classes.title}>
               Currency Exchange
             </Typography>
-
               <nav>
-                <Button color="inherit">
-                  <NavLink exact to="/" activeClassName="active" className={classes.linkColor}>
-                      Home
-                  </NavLink>{' '}
-                </Button>
-                <Button color="inherit">
-                 <NavLink exact to="/CurrencyExchange" activeClassName="active" className={classes.linkColor}>
-                    Currency Exchange
-                  </NavLink>
-                </Button>
-                <Button color="inherit">
-                  <NavLink exact to="/about" activeClassName="active" className={classes.linkColor}>
-                    About
-                  </NavLink>
-                </Button>
+                <NavLink exact to="/" activeClassName="active" className={classes.linkColor}>
+                  <Button color="inherit">Home</Button>
+                </NavLink>{' '}
+                <NavLink exact to="/CurrencyExchange" activeClassName="active" className={classes.linkColor}>
+                  <Button color="inherit">  Currency Exchange</Button>
+                </NavLink>
+                <NavLink exact to="/about" activeClassName="active" className={classes.linkColor}>
+                  <Button color="inherit">About</Button>
+                </NavLink>
               </nav>
           </Toolbar>
         </AppBar>
