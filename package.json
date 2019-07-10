@@ -2,7 +2,7 @@
   "name": "react-ssr-boilerplate",
   "version": "5.0.0",
   "private": true,
-  "homepage":"https://dvyogesh.github.io/currency-exchange",
+  "homepage": "https://dvyogesh.github.io/currency-exchange",
   "engines": {
     "node": ">=10.15"
   },
@@ -17,8 +17,7 @@
     "docker:start": "docker run --rm -it -p 3000:3000 cullenjett/react-ssr-boilerplate",
     "docker": "npm run docker:build && npm run docker:start",
     "predeploy": "npm run build",
-    "gitBuild": "npm run build && npm run start:prod",
-    "deploy": "gh-pages -d gitBuild"
+    "deploy": "gh-pages -d build"
   },
   "husky": {
     "hooks": {
@@ -61,7 +60,6 @@
     "compression": "^1.7.4",
     "core-js": "^3.1.4",
     "country-data": "0.0.31",
-    "css-loader": "^3.0.0",
     "dotenv": "^8.0.0",
     "error-overlay-webpack-plugin": "^0.3.0",
     "eslint": "^5.16.0",
@@ -110,5 +108,8 @@
     "webpack-hot-middleware": "^2.25.0",
     "webpack-manifest-plugin": "^2.0.4",
     "webpack-node-externals": "^1.7.2"
+  },
+  "devDependencies": {
+    "css-loader": "^3.0.0"
   }
 }

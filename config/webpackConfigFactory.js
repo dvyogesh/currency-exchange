@@ -88,10 +88,10 @@ module.exports = function(envType) {
         }
       },
       {
-       test: /\.(js|jsx)$/,
-       use: 'react-hot-loader/webpack',
-       include: /node_modules/
-     },
+        test: /\.(js|jsx)$/,
+        use: 'react-hot-loader/webpack',
+        include: /node_modules/
+      },
 
       // CSS Modules
       {
@@ -123,7 +123,7 @@ module.exports = function(envType) {
           'import-glob-loader'
         ].filter(Boolean)
       },
-       { test: /\.css$/, use: [ 'style-loader', 'css-loader' ] },
+      { test: /\.css$/, use: ['style-loader', 'css-loader'] },
 
       // CSS
       {
@@ -131,8 +131,8 @@ module.exports = function(envType) {
         include: [resolvePath('../src')],
         exclude: [/\.module\.s?css$/],
         use: [
-          IS_DEV && 'style-loader',
-          IS_PROD && MiniCssExtractPlugin.loader,
+          'style-loader',
+          //  IS_PROD && MiniCssExtractPlugin.loader,
           'css-loader',
           {
             loader: 'postcss-loader',

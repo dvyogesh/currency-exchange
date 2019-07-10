@@ -2,6 +2,19 @@
 process.env.NODE_ENV = 'production';
 process.env.PUBLIC_URL = process.env.PUBLIC_URL || '';
 
+require('@babel/register')({
+  plugins: [
+    [
+      'css-modules-transform',
+      {
+        camelCase: true,
+        extensions: ['.css', '.scss'],
+        generateScopedName: '[hash:base64]'
+      }
+    ],
+    'dynamic-import-node'
+  ]
+});
 const cluster = require('cluster');
 
 const { app } = require('../build/server');
@@ -27,9 +40,7 @@ if (cluster.isMaster) {
     }
 
     console.info(
-      `Server running on port ${PORT} -- Worker pid: ${
-        cluster.worker.process.pid
-      }`
+      `Server running on port ${PORT} -- Worker pid: ${cluster.worker.process.pid}`
     );
   });
 }
