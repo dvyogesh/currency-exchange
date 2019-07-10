@@ -1,6 +1,6 @@
 export default {
-  currencyList:[],
-  countryFullName:{
+  currencyList: [],
+  countryFullName: {
     CAD: 'Canadian dollar',
     HKD: 'Hong kong dollar',
     ISK: 'Icelandic kcrown',
@@ -16,4 +16,4 @@ export default {
     BRL: 'Brazil Real',
     RUB: 'Russia Ruble'
   }
-}
+};

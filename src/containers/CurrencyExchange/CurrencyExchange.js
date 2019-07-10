@@ -1,43 +1,44 @@
-import React from 'react'
-import {Grid} from '@material-ui/core'
-import withStyles from '@material-ui/core/styles/withStyles'
-import {cloneDeep, find} from 'lodash'
-import {toast} from 'react-toastify'
-import CurrencyExchangeStyle from './CurrencyExchangeStyle'
-import HeaderCard from '../../components/Cards/HeaderCard'
-import Constants from './CurrencyExchangeConstants'
+import React from 'react';
+import { Grid } from '@material-ui/core';
+import withStyles from '@material-ui/core/styles/withStyles';
+import { cloneDeep, find } from 'lodash';
+import { toast } from 'react-toastify';
+import CurrencyExchangeStyle from './CurrencyExchangeStyle';
+import HeaderCard from '../../components/Cards/HeaderCard';
+import Constants from './CurrencyExchangeConstants';
 import Divider from '@material-ui/core/Divider';
-import CurrencyList from './CurrencyList'
-import CurrencyExchangeCardFooter from './CurrencyExchangeCardFooter'
-import CurrencyExchangeCardHeader from './CurrencyExchangeCardHeader'
-import {api} from '../../api'
+import CurrencyList from './CurrencyList';
+import CurrencyExchangeCardFooter from './CurrencyExchangeCardFooter';
+import CurrencyExchangeCardHeader from './CurrencyExchangeCardHeader';
+import { api } from '../../api';
 
 class CurrencyExchange extends React.Component {
-  constructor (props) {
-    super(props)
+  constructor(props) {
+    super(props);
     this.state = {
-      currencyList:cloneDeep(Constants.currencyList),
+      currencyList: cloneDeep(Constants.currencyList),
       //USDValues: props.USDValues, //cloneDeep(Constants[props.selectedTech]),
       dropDownValue: 'INR',
       USDValue: 1.0,
-      currencyPrices:{}
-    }
+      currencyPrices: {}
+    };
   }
 
-  componentDidMount () {
-    this.feetchCurrencyData()
+  componentDidMount() {
+    this.feetchCurrencyData();
   }
 
   feetchCurrencyData = () => {
-    api.featchCurrencyData.currencyApi()
-    .then(res => {
-      this.setState({currencyPrices: res.rates})
-      this.pushOneCuuency()
-    })
-    .catch((error) => {
-      this.setState({loading: false})
-      toast.error(`${error}`)
-    });
+    api.featchCurrencyData
+      .currencyApi()
+      .then(res => {
+        this.setState({ currencyPrices: res.rates });
+        this.pushOneCuuency();
+      })
+      .catch(error => {
+        this.setState({ loading: false });
+        toast.error(`${error}`);
+      });
     //
     // *******  Axios Example ********
 
@@ -57,64 +58,70 @@ class CurrencyExchange extends React.Component {
     //     this.setState({loading: false})
     //     toast.error(`${error}`)
     //   });
-  }
+  };
 
   pushOneCuuency = () => {
-      const {currencyList, currencyPrices, dropDownValue}=this.state
-      currencyList.push({
-        fullName: dropDownValue,
-        shortName: dropDownValue,
-        oneUnitInUSD: currencyPrices[dropDownValue]
-      })
-      this.setState({currencyList})
-  }
+    const { currencyList, currencyPrices, dropDownValue } = this.state;
+    currencyList.push({
+      fullName: dropDownValue,
+      shortName: dropDownValue,
+      oneUnitInUSD: currencyPrices[dropDownValue]
+    });
+    this.setState({ currencyList });
+  };
 
-  handleChange = (type)=>(event) =>{
-    this.setState({[type]:event.target.value })
-  }
+  handleChange = type => event => {
+    this.setState({ [type]: event.target.value });
+  };
 
   handleModalClose = () => {
-    this.setState({modalOpen: false })
-  }
+    this.setState({ modalOpen: false });
+  };
 
   handleAddCurrency = () => {
-    const {currencyList, currencyPrices, dropDownValue}=this.state
+    const { currencyList, currencyPrices, dropDownValue } = this.state;
     if (dropDownValue && this.checkAddedCurrcy()) {
       currencyList.push({
         ...currencyList,
-        fullName: Constants.countryFullName[dropDownValue] || 'One Nation Currency',
+        fullName:
+          Constants.countryFullName[dropDownValue] || 'One Nation Currency',
         shortName: dropDownValue,
         oneUnitInUSD: currencyPrices[dropDownValue]
-      })
-      this.setState({currencyList})
+      });
+      this.setState({ currencyList });
     } else {
-        toast.error('select proper Cuurency')
+      toast.error('select proper Cuurency');
     }
-  }
+  };
 
-  removeCurrencyList = (index) => {
-    const {currencyList} = this.state
-    currencyList.splice(index, 1)
-    this.setState({currencyList})
-  }
+  removeCurrencyList = index => {
+    const { currencyList } = this.state;
+    currencyList.splice(index, 1);
+    this.setState({ currencyList });
+  };
 
   checkAddedCurrcy = () => {
-    const {currencyList, dropDownValue} = this.state
-    const check = find(currencyList, {shortName: dropDownValue})
+    const { currencyList, dropDownValue } = this.state;
+    const check = find(currencyList, { shortName: dropDownValue });
     if (check) {
-      toast.error('currency exist')
-      return false
+      toast.error('currency exist');
+      return false;
     } else {
-      return true
+      return true;
     }
-  }
+  };
 
   render() {
-    const {dropDownValue, USDValue, currencyList, currencyPrices} = this.state
-    const {classes}=this.props
+    const {
+      dropDownValue,
+      USDValue,
+      currencyList,
+      currencyPrices
+    } = this.state;
+    const { classes } = this.props;
     return (
       <Grid container>
-        <Grid item xs={12} md={6} style={{margin: '0 auto'}}>
+        <Grid item xs={12} md={6} style={{ margin: '0 auto' }}>
           <HeaderCard
             headerColor="white"
             cardTitle={
@@ -125,12 +132,12 @@ class CurrencyExchange extends React.Component {
             }
             content={
               <div className={classes.currencyListMain}>
-                <Divider/>
-                  <CurrencyList
-                    USDValue={USDValue}
-                    currencyList={currencyList}
-                    removeCurrencyList={this.removeCurrencyList}
-                  />
+                <Divider />
+                <CurrencyList
+                  USDValue={USDValue}
+                  currencyList={currencyList}
+                  removeCurrencyList={this.removeCurrencyList}
+                />
               </div>
             }
             footer={
@@ -148,4 +155,4 @@ class CurrencyExchange extends React.Component {
   }
 }
 
-export default withStyles(CurrencyExchangeStyle)(CurrencyExchange)
+export default withStyles(CurrencyExchangeStyle)(CurrencyExchange);

@@ -1,19 +1,19 @@
-import React from 'react'
-import AppBar from '@material-ui/core/AppBar'
-import Toolbar from '@material-ui/core/Toolbar'
-import IconButton from '@material-ui/core/IconButton'
+import React from 'react';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import IconButton from '@material-ui/core/IconButton';
 import EuroSymbol from '@material-ui/icons/EuroSymbol';
-import withStyles from '@material-ui/core/styles/withStyles'
+import withStyles from '@material-ui/core/styles/withStyles';
 import { NavLink } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 const Style = theme => ({
   root: {
-    flexGrow: 1,
+    flexGrow: 1
   },
   title: {
     flexGrow: 1,
-    color:'#fff',
+    color: '#fff',
     fontSize: 24
   },
   maxHeight: {
@@ -21,38 +21,57 @@ const Style = theme => ({
     minHeight: 60
   },
   linkColor: {
-    color:'#fff'
+    color: '#fff'
   }
-})
+});
 class Header extends React.Component {
-
-  render(){
-    const {classes} = this.props
+  render() {
+    const { classes } = this.props;
     return (
       <div className={classes.root}>
         <AppBar position="static">
           <Toolbar className={classes.maxHeight}>
-            <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="Menu">
+            <IconButton
+              edge="start"
+              className={classes.menuButton}
+              color="inherit"
+              aria-label="Menu"
+            >
               <EuroSymbol />
             </IconButton>
-             <Typography variant="display2" className={classes.title}>
+            <Typography variant="display2" className={classes.title}>
               Currency Exchange
             </Typography>
-              <nav>
-                <NavLink exact to="/" activeClassName="active" className={classes.linkColor}>
-                  <Button color="inherit">Home</Button>
-                </NavLink>{' '}
-                <NavLink exact to="/CurrencyExchange" activeClassName="active" className={classes.linkColor}>
-                  <Button color="inherit">  Currency Exchange</Button>
-                </NavLink>
-                <NavLink exact to="/about" activeClassName="active" className={classes.linkColor}>
-                  <Button color="inherit">About</Button>
-                </NavLink>
-              </nav>
+            <nav>
+              <NavLink
+                exact
+                to="/"
+                activeClassName="active"
+                className={classes.linkColor}
+              >
+                <Button color="inherit">Home</Button>
+              </NavLink>{' '}
+              <NavLink
+                exact
+                to="/CurrencyExchange"
+                activeClassName="active"
+                className={classes.linkColor}
+              >
+                <Button color="inherit"> Currency Exchange</Button>
+              </NavLink>
+              <NavLink
+                exact
+                to="/about"
+                activeClassName="active"
+                className={classes.linkColor}
+              >
+                <Button color="inherit">About</Button>
+              </NavLink>
+            </nav>
           </Toolbar>
         </AppBar>
       </div>
     );
   }
 }
-  export default withStyles(Style)(Header)
+export default withStyles(Style)(Header);

@@ -2,17 +2,17 @@ const CurrencyExchangeStyle = theme => ({
   input: {
     // paddingTop: 2
   },
-  textAlign:{
+  textAlign: {
     textAlign: 'center'
   },
   listUnstyled: {
-    display:'block',
-    padding:0,
-    marginBottom:10
+    display: 'block',
+    padding: 0,
+    marginBottom: 10
   },
-  paper:{
-    padding:10,
-    maxWidth:'85%',
+  paper: {
+    padding: 10,
+    maxWidth: '85%',
     position: 'relative'
   },
   removeBtn: {
@@ -26,12 +26,12 @@ const CurrencyExchangeStyle = theme => ({
     right: '-50px',
     fontSize: '35px'
   },
-  addmoreBtn:{
+  addmoreBtn: {
     marginTop: 5
   },
-  currencyListMain:{
+  currencyListMain: {
     paddingBottom: 15
   }
-})
+});
 
-export default CurrencyExchangeStyle
+export default CurrencyExchangeStyle;

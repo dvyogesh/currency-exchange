@@ -3,6 +3,6 @@ const styles = theme => ({
     // fontSize: 15,
     // textAlign: 'center'
   }
-})
+});
 
-export default styles
+export default styles;

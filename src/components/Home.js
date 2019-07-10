@@ -12,7 +12,10 @@ const Home = () => {
   return (
     <div>
       <h1>Home page </h1>
-      <p>You can check your <NavLink to="/CurrencyExchange">currency convertion</NavLink></p>
+      <p>
+        You can check your{' '}
+        <NavLink to="/CurrencyExchange">currency convertion</NavLink>
+      </p>
       <form
         onSubmit={e => {
           e.preventDefault();

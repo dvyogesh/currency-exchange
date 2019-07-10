@@ -131,8 +131,8 @@ module.exports = function(envType) {
         include: [resolvePath('../src')],
         exclude: [/\.module\.s?css$/],
         use: [
-          'style-loader',
-          //  IS_PROD && MiniCssExtractPlugin.loader,
+          IS_DEV && 'style-loader',
+          IS_PROD && MiniCssExtractPlugin.loader,
           'css-loader',
           {
             loader: 'postcss-loader',

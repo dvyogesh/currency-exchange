@@ -1,7 +1,7 @@
 //import customSelect from './customSelectStyle'
 
 const customSelectStyle = {
-//  ...customSelect,
+  //  ...customSelect,
   inputLabelWidth: {
     '&formControl': {
       width: '100%'
@@ -23,6 +23,6 @@ const customSelectStyle = {
   inputProps: {
     padding: '0 10px'
   }
-}
+};
 
-export default customSelectStyle
+export default customSelectStyle;

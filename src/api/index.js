@@ -1,6 +1,6 @@
 import { httpClient } from './httpClient';
 import { todosApi } from './todosApi';
-import {currencyApi} from './currencyApi'
+import { currencyApi } from './currencyApi';
 
 export function apiFactory(http) {
   return {

@@ -1,18 +1,24 @@
-import React from 'react'
-import Button from '@material-ui/core/Button'
-import PropTypes from 'prop-types'
-import Dialog from '@material-ui/core/Dialog'
-import DialogActions from '@material-ui/core/DialogActions'
-import DialogContent from '@material-ui/core/DialogContent'
-import DialogContentText from '@material-ui/core/DialogContentText'
-import DialogTitle from '@material-ui/core/DialogTitle'
+import React from 'react';
+import Button from '@material-ui/core/Button';
+import PropTypes from 'prop-types';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
 
 export default class FormDialog extends React.Component {
-  render () {
+  render() {
     const {
-      children, handleClose, openState, submitBtnText, nextStep, dialogContentText,
-      dialogHeadding, maxWidth
-    } = this.props
+      children,
+      handleClose,
+      openState,
+      submitBtnText,
+      nextStep,
+      dialogContentText,
+      dialogHeadding,
+      maxWidth
+    } = this.props;
     return (
       <div>
         <Dialog
@@ -23,9 +29,7 @@ export default class FormDialog extends React.Component {
         >
           <DialogTitle id="form-dialog-title">{dialogHeadding}</DialogTitle>
           <DialogContent>
-            <DialogContentText>
-              {dialogContentText}
-            </DialogContentText>
+            <DialogContentText>{dialogContentText}</DialogContentText>
             {children}
           </DialogContent>
           <DialogActions>
@@ -38,7 +42,7 @@ export default class FormDialog extends React.Component {
           </DialogActions>
         </Dialog>
       </div>
-    )
+    );
   }
 }
 
@@ -54,8 +58,7 @@ FormDialog.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
   ]).isRequired
-
-}
+};
 FormDialog.defaultProps = {
   openState: false,
   nextStep: false,
@@ -63,4 +66,4 @@ FormDialog.defaultProps = {
   dialogContentText: '',
   dialogHeadding: '',
   disableBackdropClick: false
-}
+};

@@ -7,7 +7,7 @@ const styles = theme => ({
   label: {
     paddingLeft: 10,
     fontSize: 14,
-    left:5,
+    left: 5,
     [theme.breakpoints.down('xs')]: {
       fontSize: 15
     }
@@ -16,6 +16,6 @@ const styles = theme => ({
     paddingLeft: 10,
     paddingTop: 10
   }
-})
+});
 
-export default styles
+export default styles;

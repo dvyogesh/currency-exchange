@@ -1,18 +1,18 @@
 const headerCardStyle = {
-  card:{
-   display: 'inline-block',
-   position: 'relative',
-   overflow: 'visible',
-   width: '100%',
-   minWidth:380,
-   textAlign: 'left',
-   margin: '10px 0',
-   boxShadow: '0 1px 4px 0 rgba(0, 0, 0, 0.14)',
-   borderRadius: '6px',
-   color: 'rgba(0, 0, 0, 0.87)',
-   background: '#fff'
- },
- cardHeader: {
+  card: {
+    display: 'inline-block',
+    position: 'relative',
+    overflow: 'visible',
+    width: '100%',
+    minWidth: 380,
+    textAlign: 'left',
+    margin: '10px 0',
+    boxShadow: '0 1px 4px 0 rgba(0, 0, 0, 0.14)',
+    borderRadius: '6px',
+    color: 'rgba(0, 0, 0, 0.87)',
+    background: '#fff'
+  },
+  cardHeader: {
     margin: '10px 15px 0',
     fontSize: '0.6rem',
     borderRadius: '3px',
@@ -51,27 +51,26 @@ const headerCardStyle = {
     textAlign: 'center'
   },
   orangeCardHeader: {
-    background: 'linear-gradient(60deg, #ffa726, #fb8c00)',
+    background: 'linear-gradient(60deg, #ffa726, #fb8c00)'
   },
   greenCardHeader: {
-    background: 'linear-gradient(60deg, #66bb6a, #43a047)',
+    background: 'linear-gradient(60deg, #66bb6a, #43a047)'
   },
   redCardHeader: {
-    background: 'linear-gradient(60deg, #ef5350, #e53935)',
+    background: 'linear-gradient(60deg, #ef5350, #e53935)'
   },
   blueCardHeader: {
-    background: 'linear-gradient(60deg, #26c6da, #00acc1)',
+    background: 'linear-gradient(60deg, #26c6da, #00acc1)'
   },
   purpleCardHeader: {
-    background: 'linear-gradient(60deg, #ab47bc, #8e24aa)',
+    background: 'linear-gradient(60deg, #ab47bc, #8e24aa)'
   },
   roseCardHeader: {
-    background: 'linear-gradient(60deg, #ec407a, #d81b60)',
+    background: 'linear-gradient(60deg, #ec407a, #d81b60)'
   },
   whiteCardHeader: {
     background: 'white'
   }
-}
+};
 
-
-export default headerCardStyle
+export default headerCardStyle;

@@ -9,12 +9,20 @@ class About extends Component {
       <div className={styles.textCenter}>
         <h1 className={styles.title}>About page</h1>
         <p>Route Example</p>
-        <div >
-          <img className={styles.reactLogo} src={imagePath('react.svg')} alt="" />
+        <div>
+          <img
+            className={styles.reactLogo}
+            src={imagePath('react.svg')}
+            alt=""
+          />
         </div>
         <h2>Developer Story </h2>
         <div>
-          <img className={styles.reactLogo} src={imagePath('developer-story.png')} alt="" />
+          <img
+            className={styles.reactLogo}
+            src={imagePath('developer-story.png')}
+            alt=""
+          />
         </div>
       </div>
     );
