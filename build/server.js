@@ -501,8 +501,8 @@ module.exports = (function(s) {
       D = a(43),
       N = a.n(D),
       q = a(44),
-      A = a(45),
-      M = a.n(A),
+      M = a(45),
+      A = a.n(M),
       H = (function(s) {
         function e() {
           return l()(this, e), n()(this, m()(e).apply(this, arguments));
@@ -516,7 +516,7 @@ module.exports = (function(s) {
                 var s = this.props,
                   e = s.classes,
                   a = s.children;
-                return y.a.createElement(M.a, { className: e.root }, a);
+                return y.a.createElement(A.a, { className: e.root }, a);
               }
             }
           ]),
@@ -2597,17 +2597,11 @@ module.exports = (function(s) {
           publicPath: '/static/js/main.86606ea6.js.map'
         }
       ],
-      '../helpers/typeof': [
+      '@babel/runtime/helpers/typeof': [
         {
           id: 162,
           name:
             './node_modules/@material-ui/core/node_modules/@babel/runtime/helpers/typeof.js',
-          file: 'static/css/main.0a79c9ca.css',
-          publicPath: '/static/css/main.0a79c9ca.css'
-        },
-        {
-          id: 253,
-          name: './node_modules/@babel/runtime/helpers/typeof.js',
           file: 'static/css/main.0a79c9ca.css',
           publicPath: '/static/css/main.0a79c9ca.css'
         },
@@ -2619,21 +2613,9 @@ module.exports = (function(s) {
           publicPath: '/static/js/main.86606ea6.js'
         },
         {
-          id: 253,
-          name: './node_modules/@babel/runtime/helpers/typeof.js',
-          file: 'static/js/main.86606ea6.js',
-          publicPath: '/static/js/main.86606ea6.js'
-        },
-        {
           id: 162,
           name:
             './node_modules/@material-ui/core/node_modules/@babel/runtime/helpers/typeof.js',
-          file: 'static/js/main.86606ea6.js.map',
-          publicPath: '/static/js/main.86606ea6.js.map'
-        },
-        {
-          id: 253,
-          name: './node_modules/@babel/runtime/helpers/typeof.js',
           file: 'static/js/main.86606ea6.js.map',
           publicPath: '/static/js/main.86606ea6.js.map'
         }
@@ -3572,6 +3554,26 @@ module.exports = (function(s) {
           publicPath: '/static/js/main.86606ea6.js.map'
         }
       ],
+      '../helpers/typeof': [
+        {
+          id: 253,
+          name: './node_modules/@babel/runtime/helpers/typeof.js',
+          file: 'static/css/main.0a79c9ca.css',
+          publicPath: '/static/css/main.0a79c9ca.css'
+        },
+        {
+          id: 253,
+          name: './node_modules/@babel/runtime/helpers/typeof.js',
+          file: 'static/js/main.86606ea6.js',
+          publicPath: '/static/js/main.86606ea6.js'
+        },
+        {
+          id: 253,
+          name: './node_modules/@babel/runtime/helpers/typeof.js',
+          file: 'static/js/main.86606ea6.js.map',
+          publicPath: '/static/js/main.86606ea6.js.map'
+        }
+      ],
       './mergeClasses': [
         {
           id: 255,
@@ -3612,7 +3614,7 @@ module.exports = (function(s) {
           publicPath: '/static/js/main.86606ea6.js.map'
         }
       ],
-      '../styles/transitions': [
+      './transitions': [
         {
           id: 257,
           name: './node_modules/@material-ui/core/styles/transitions.js',
@@ -12772,7 +12774,7 @@ module.exports = (function(s) {
             '/static/js/vendors~CurrencyExchange.cefdf79c.chunk.js.map'
         }
       ],
-      './MenuList': [
+      '../MenuList': [
         {
           id: 708,
           name: './node_modules/@material-ui/core/MenuList/index.js',
@@ -12780,21 +12782,8 @@ module.exports = (function(s) {
           publicPath: '/static/js/vendors~CurrencyExchange.cefdf79c.chunk.js'
         },
         {
-          id: 6065,
-          name: './node_modules/@material-ui/core/MenuList/MenuList.js',
-          file: 'static/js/vendors~CurrencyExchange.cefdf79c.chunk.js',
-          publicPath: '/static/js/vendors~CurrencyExchange.cefdf79c.chunk.js'
-        },
-        {
           id: 708,
           name: './node_modules/@material-ui/core/MenuList/index.js',
-          file: 'static/js/vendors~CurrencyExchange.cefdf79c.chunk.js.map',
-          publicPath:
-            '/static/js/vendors~CurrencyExchange.cefdf79c.chunk.js.map'
-        },
-        {
-          id: 6065,
-          name: './node_modules/@material-ui/core/MenuList/MenuList.js',
           file: 'static/js/vendors~CurrencyExchange.cefdf79c.chunk.js.map',
           publicPath:
             '/static/js/vendors~CurrencyExchange.cefdf79c.chunk.js.map'
@@ -13077,7 +13066,7 @@ module.exports = (function(s) {
             '/static/js/vendors~CurrencyExchange.cefdf79c.chunk.js.map'
         }
       ],
-      './MenuItem': [
+      '../MenuItem': [
         {
           id: 723,
           name: './node_modules/@material-ui/core/MenuItem/index.js',
@@ -13085,21 +13074,8 @@ module.exports = (function(s) {
           publicPath: '/static/js/vendors~CurrencyExchange.cefdf79c.chunk.js'
         },
         {
-          id: 6042,
-          name: './node_modules/@material-ui/core/MenuItem/MenuItem.js',
-          file: 'static/js/vendors~CurrencyExchange.cefdf79c.chunk.js',
-          publicPath: '/static/js/vendors~CurrencyExchange.cefdf79c.chunk.js'
-        },
-        {
           id: 723,
           name: './node_modules/@material-ui/core/MenuItem/index.js',
-          file: 'static/js/vendors~CurrencyExchange.cefdf79c.chunk.js.map',
-          publicPath:
-            '/static/js/vendors~CurrencyExchange.cefdf79c.chunk.js.map'
-        },
-        {
-          id: 6042,
-          name: './node_modules/@material-ui/core/MenuItem/MenuItem.js',
           file: 'static/js/vendors~CurrencyExchange.cefdf79c.chunk.js.map',
           publicPath:
             '/static/js/vendors~CurrencyExchange.cefdf79c.chunk.js.map'
@@ -13347,6 +13323,21 @@ module.exports = (function(s) {
             '/static/js/vendors~CurrencyExchange.cefdf79c.chunk.js.map'
         }
       ],
+      './MenuItem': [
+        {
+          id: 6042,
+          name: './node_modules/@material-ui/core/MenuItem/MenuItem.js',
+          file: 'static/js/vendors~CurrencyExchange.cefdf79c.chunk.js',
+          publicPath: '/static/js/vendors~CurrencyExchange.cefdf79c.chunk.js'
+        },
+        {
+          id: 6042,
+          name: './node_modules/@material-ui/core/MenuItem/MenuItem.js',
+          file: 'static/js/vendors~CurrencyExchange.cefdf79c.chunk.js.map',
+          publicPath:
+            '/static/js/vendors~CurrencyExchange.cefdf79c.chunk.js.map'
+        }
+      ],
       './ListItem': [
         {
           id: 6043,
@@ -13377,7 +13368,7 @@ module.exports = (function(s) {
             '/static/js/vendors~CurrencyExchange.cefdf79c.chunk.js.map'
         }
       ],
-      './Menu': [
+      '../Menu/Menu': [
         {
           id: 6046,
           name: './node_modules/@material-ui/core/Menu/Menu.js',
@@ -13582,6 +13573,21 @@ module.exports = (function(s) {
         {
           id: 6064,
           name: './node_modules/@material-ui/core/Grow/Grow.js',
+          file: 'static/js/vendors~CurrencyExchange.cefdf79c.chunk.js.map',
+          publicPath:
+            '/static/js/vendors~CurrencyExchange.cefdf79c.chunk.js.map'
+        }
+      ],
+      './MenuList': [
+        {
+          id: 6065,
+          name: './node_modules/@material-ui/core/MenuList/MenuList.js',
+          file: 'static/js/vendors~CurrencyExchange.cefdf79c.chunk.js',
+          publicPath: '/static/js/vendors~CurrencyExchange.cefdf79c.chunk.js'
+        },
+        {
+          id: 6065,
+          name: './node_modules/@material-ui/core/MenuList/MenuList.js',
           file: 'static/js/vendors~CurrencyExchange.cefdf79c.chunk.js.map',
           publicPath:
             '/static/js/vendors~CurrencyExchange.cefdf79c.chunk.js.map'
@@ -13809,9 +13815,9 @@ module.exports = (function(s) {
       D = a(40),
       N = a.n(D),
       q = a(41),
-      A = a.n(q),
-      M = a(42),
-      H = a.n(M),
+      M = a.n(q),
+      A = a(42),
+      H = a.n(A),
       F = a(20),
       U = a.n(F),
       z = (function(s) {
@@ -13842,7 +13848,7 @@ module.exports = (function(s) {
                           color: 'inherit',
                           'aria-label': 'Menu'
                         },
-                        l.a.createElement(A.a, null)
+                        l.a.createElement(M.a, null)
                       ),
                       l.a.createElement(
                         H.a,
@@ -14296,7 +14302,7 @@ module.exports = (function(s) {
         build: 'node scripts/build.js',
         test: 'node scripts/test.js',
         'start:prod': 'node scripts/startProd.js',
-        lint: 'eslint build --fix',
+        lint: 'eslint src/**/*.js',
         format: 'prettier --write "src/**/*.{js,json,css,md}"',
         'docker:build':
           'docker build --rm -t cullenjett/react-ssr-boilerplate .',
@@ -14307,7 +14313,10 @@ module.exports = (function(s) {
         deploy: 'gh-pages -d build'
       },
       husky: { hooks: { 'pre-commit': 'lint-staged' } },
-      'lint-staged': { '*.{js,json,css,md}': ['npm run format', 'git add'] },
+      'lint-staged': {
+        '*.js': ['npm run lint'],
+        '*.{js,json,css,md}': ['npm run format', 'git add']
+      },
       dependencies: {
         '@babel/core': '^7.4.5',
         '@babel/plugin-proposal-class-properties': '^7.4.4',
