@@ -1031,7 +1031,7 @@
       "publicPath": "/static/js/main.86606ea6.js.map"
     }
   ],
-  "../rules/StyleRule": [
+  "./rules/StyleRule": [
     {
       "id": 80,
       "name": "./node_modules/jss/lib/rules/StyleRule.js",
