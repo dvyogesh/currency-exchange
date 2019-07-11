@@ -4,7 +4,6 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import withStyles from '@material-ui/core/styles/withStyles';
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.min.css';
 import Style from './AppStyle';
 import * as metadata from '../metadata';
 import Header from './Header/Header';
