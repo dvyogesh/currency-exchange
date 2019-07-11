@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { hydrate } from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 //import Loadable from 'react-loadable'
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import App from './components/App';
+import ContextProvider from './ContextProvider.js';
 import { ServerDataProvider } from './state/serverDataContext';
 import { AppContainer } from 'react-hot-loader';
 import './styles/index.scss';
@@ -15,11 +17,19 @@ const theme = createMuiTheme({
   }
 });
 export const main = () => {
+  const context = {
+    insertCss: (...styles) => {
+      const removeCss = styles.map(x => x._insertCss());
+      return () => {
+        removeCss.forEach(f => f());
+      };
+    }
+  };
   //Loadable.preloadReady().then(() => {
   ReactDOM.render(
     <AppContainer>
       <MuiThemeProvider theme={theme}>
-        <ServerDataProvider value={serverData}>
+        <ServerDataProvider value={serverData} context={context}>
           <BrowserRouter>
             <App />
           </BrowserRouter>
@@ -30,3 +40,17 @@ export const main = () => {
   );
   //})
 };
+
+//
+// const context = {
+//     insertCss: (...styles) => {
+//       const removeCss = styles.map(x => x._insertCss());
+//       return () => {
+//         removeCss.forEach(f => f());
+//       };
+//     },
+//   }
+//
+// hydrate(<ContextProvider >
+// <App />
+// </ContextProvider>, document.getElementById('app'))

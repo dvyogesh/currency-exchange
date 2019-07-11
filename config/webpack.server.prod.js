@@ -60,6 +60,10 @@ module.exports = {
           'sass-loader',
           'import-glob-loader'
         ]
+      },
+      {
+        test: /\.css$/,
+        use: ['isomorphic-style-loader', { loader: 'css-loader' }]
       }
     ]
   },

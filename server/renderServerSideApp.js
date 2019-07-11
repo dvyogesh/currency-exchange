@@ -11,7 +11,19 @@ import { indexHtml } from './indexHtml';
 import stats from '../build/react-loadable.json';
 import { ServerDataProvider } from '../src/state/serverDataContext';
 
-const ServerApp = ({ context, data, location }) => {
+//import ContextProvider from '../src/ContextProvider'
+const ServerApp = ({ data, location }) => {
+  const css = new Set();
+  const context = {
+    insertCss: (...styles) => styles.forEach(style => css.add(style._getCss()))
+  };
+
+  // const markup = ReactDOMServer.renderToString(
+  //   <ContextProvider context={context}>
+  //     <App />
+  //   </ContextProvider>
+  // )
+
   return (
     <ServerDataProvider value={data}>
       <StaticRouter location={location} context={context}>

@@ -49,7 +49,7 @@ const jsScripts = bundles => {
       jsFilePath =>
         `<script type="text/javascript" src="${jsFilePath}" defer></script>`
     )
-    .join('\n');
+    .join('');
 };
 
 export const indexHtml = ({ helmet, serverData, markup, bundles }) => {
@@ -59,13 +59,19 @@ export const indexHtml = ({ helmet, serverData, markup, bundles }) => {
   return `
     <!doctype html>
     <html lang="en" ${htmlAttrs}>
+    <script>console.log(document.querySelectorAll('link').length)
+    if (document.querySelectorAll('link').length > 4) {
+      document.write('<div></div>')
+    }
+    </script>
       <head>
+        ${cssLinks()}
         ${helmet.title.toString()}
         ${helmet.meta.toString()}
 
         ${preloadScripts(bundles)}
         ${helmet.link.toString()}
-        ${cssLinks()}
+
         ${helmet.style.toString()}
 
         ${helmet.noscript.toString()}
@@ -80,6 +86,7 @@ export const indexHtml = ({ helmet, serverData, markup, bundles }) => {
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
         <script>
           window.process = ${env.forIndexHtml};
+
           window.__SERVER_DATA__ = ${JSON.stringify(serverData)}
           window.__ASSET_MANIFEST__ = ${JSON.stringify(assetManifest)}
         </script>

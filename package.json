@@ -110,6 +110,7 @@
     "webpack-node-externals": "^1.7.2"
   },
   "devDependencies": {
-    "css-loader": "^3.0.0"
+    "css-loader": "^3.0.0",
+    "isomorphic-style-loader": "^5.1.0"
   }
 }

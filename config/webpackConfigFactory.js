@@ -10,7 +10,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-
 const { getAppEnv } = require('./env');
 
 const env = getAppEnv();
@@ -123,8 +122,7 @@ module.exports = function(envType) {
           'import-glob-loader'
         ].filter(Boolean)
       },
-      { test: /\.css$/, use: ['style-loader', 'css-loader'] },
-
+      //{ test: /\.css$/, use: ['style-loader', 'css-loader'] },
       // CSS
       {
         test: /\.s?css$/,
@@ -149,6 +147,10 @@ module.exports = function(envType) {
           'sass-loader',
           'import-glob-loader'
         ].filter(Boolean)
+      },
+      {
+        test: /\.css$/,
+        use: ['isomorphic-style-loader', { loader: 'css-loader' }]
       }
     ].filter(Boolean)
   };
