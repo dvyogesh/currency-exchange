@@ -1,11 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { hydrate } from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 //import Loadable from 'react-loadable'
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import App from './components/App';
-import ContextProvider from './ContextProvider.js';
 import { ServerDataProvider } from './state/serverDataContext';
 import { AppContainer } from 'react-hot-loader';
 import './styles/index.scss';
